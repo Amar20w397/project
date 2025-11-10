@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+/* Mengatur nol margin dan padding untuk semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Gaya font default untuk body */
+body {
+  font-family: Arial, sans-serif; /* Menggunakan font Arial atau sans-serif jika tidak tersedia */
+}
+
+/* Gaya untuk bagian header */
+header {
+  background-color: #f4f4f4; /* Warna latar belakang header */
+  padding: 10px; /* Padding untuk header */
+  padding-right: 10px; /* Padding kanan untuk header */
+  text-align: center; /* Posisi teks ke tengah */
+  margin-top: 1px; /* Jarak atas dari elemen di atasnya */
+  height: 100%; /* Tinggi header */
+}
+
+/* Gaya untuk kontainer */
+.container {
+  height: 3rem; /* Tinggi kontainer */
+  width: 100%; /* Lebar kontainer */
+  background-color: rgb(255, 0, 0); /* Warna latar belakang kontainer */
+  color: rgb(0, 0, 0); /* Warna teks pada kontainer */
+  text-align: center; /* Posisi teks ke tengah pada kontainer */
+}
+
+/* Gaya untuk judul h1 dalam header */
+header h1 {
+  color: #333; /* Warna teks judul h1 */
+  margin-bottom: 10px; /* Jarak bawah dari judul h1 */
+}
+
+/* Gaya untuk paragraf dalam header */
+header p {
+  color: #777; /* Warna teks paragraf dalam header */
+  margin-bottom: 20px; /* Jarak bawah dari paragraf dalam header */
+}
+
+/* Gaya untuk daftar navigasi */
+nav ul {
+  list-style-type: none; /* Menghilangkan tanda bullet pada daftar navigasi */
+  padding: 10px; /* Padding untuk daftar navigasi */
+  text-align: right; /* Posisi teks ke kanan */
+}
+
+/* Gaya untuk setiap item daftar navigasi */
+nav ul li {
+  display: inline; /* Menampilkan item daftar navigasi secara sejajar */
+  margin-right: 20px; /* Jarak kanan antara setiap item */
+}
+
+/* Gaya untuk tautan di dalam daftar navigasi */
+nav ul li a {
+  color: #333; /* Warna teks tautan */
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+/* Gaya hover saat mengarahkan kursor ke tautan */
+nav ul li a:hover {
+  color: #ff4d00; /* Warna teks tautan saat hover */
+}
+
+/* Gaya untuk bagian footer */
+footer {
+  position: relative; /* Posisi relatif footer */
+  bottom: 0; /* Memposisikan footer di bagian bawah */
+  height: 3rem; /* Tinggi footer */
+  width: 100%; /* Lebar footer */
+  background-color: rgb(255, 0, 0); /* Warna latar belakang footer */
+  color: rgb(0, 0, 0); /* Warna teks pada footer */
+  display: flex; /* Menjadikan tata letak footer menjadi flexbox */
+  justify-content: space-between; /* Menyebarkan elemen pada footer secara merata */
+}
+        /* Gaya saat hover pada tautan di dalam elemen footer */
+footer a:hover {
+  color: white; /* Warna teks saat tautan dihover pada footer */
+}
+
+/* Gaya untuk tautan di dalam elemen footer */
+footer a {
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan footer */
+  line-height: 50px; /* Jarak vertikal antara baris dalam tautan footer */
+  color: #000; /* Warna teks pada tautan footer */
+  padding-right: 25px; /* Padding kanan pada tautan footer */
+}
+
+/* Gaya untuk paragraf dalam elemen footer */
+footer p {
+  padding-left: 25px; /* Padding kiri pada paragraf dalam footer */
+  line-height: 40px; /* Jarak vertikal antara baris dalam paragraf footer */
+}
+/* Styles for the image container */
+.gambar-container img {
+            /* Menetapkan penataan konten gambar ke tengah */
+            align-items: center;
+            /* Menetapkan tampilan konten sebagai flexbox */
+            display: flex;
+            /* Menetapkan jarak dari sisi kanan dan kiri secara otomatis */
+            margin: auto;
+        }
+
+/* Gaya untuk menambahkan garis bawah */
+.border {
+  border-bottom: 3px solid black; /* Garis bawah dengan ketebalan 3px */
+  margin-top: 20px; /* Jarak atas dari elemen di atasnya */
+}
+
+/* Gaya untuk tautan dalam elemen dengan kelas 'rumah' yang berada dalam elemen <a> dengan gambar */
+.rumah a img {
+  margin-right: 16px; /* Jarak kanan dari gambar */
+  display: flex; /* Menjadikan tata letak gambar menjadi flexbox */
+}
+
+/* Gaya untuk container45 */
+.container45 {
+  display: flex; /* Menjadikan tata letak menjadi flexbox */
+  align-items: center; /* Posisi elemen ke tengah secara vertikal */
+  flex-wrap: wrap; /* Mengizinkan wrapping saat ukuran layar berubah */
+  gap: 10px; /* Jarak antara elemen */
+  justify-content: space-around; /* Menyebarkan elemen secara merata */
+  margin-left: 200px; /* Jarak kiri dari elemen */
+}
+
+/* Gaya untuk item */
+.item {
+  text-align: center; /* Posisi teks ke tengah */
+  width: 30%; /* Lebar elemen */
+  margin-bottom: 20px; /* Jarak bawah dari elemen */
+  margin-top: 20px; /* Jarak atas dari elemen */
+}
+
+/* Gaya untuk harga */
+.harga {
+  margin-top: 10px; /* Jarak atas dari elemen */
+  display: flex; /* Menjadikan tata letak menjadi flexbox */
+  flex-direction: column; /* Menjadikan tata letak menjadi kolom */
+  align-items: center; /* Posisi elemen ke tengah secara horizontal */
+}
+
+/* Gaya untuk jumlah */
+.jumlah {
+  display: flex; /* Menjadikan tata letak menjadi flexbox */
+  align-items: center; /* Posisi elemen ke tengah secara horizontal */
+  justify-content: center; /* Posisi elemen ke tengah secara vertikal */
+  margin-top: 5px; /* Jarak atas dari elemen */
+}
+
+/* Gaya untuk tombol */
+.tombol {
+  margin: 0 5px; /* Jarak sekitar tombol */
+  padding: 5px 10px; /* Padding tombol */
+  cursor: pointer; /* Kursor menunjukkan tombol dapat diklik */
+  background-color: #f0f0f0; /* Warna latar belakang tombol */
+  border-radius: 5px; /* Sudut sudut tombol */
+}
+
+/* Gaya untuk tombol di dalam container45 */
+.container45 button {
+  width: 150px; /* Lebar tombol */
+  height: 25px; /* Tinggi tombol */
+}
+
+/* Gaya saat hover pada tombol di dalam container45 */
+.container45 button:hover {
+  background-color: #000; /* Warna latar belakang saat tombol dihover */
+  color: white; /* Warna teks saat tombol dihover */
+  transition: 0.5s; /* Efek transisi */
+}
+
+/* Gaya untuk elemen dengan kelas 'side' */
+.side {
+  position: absolute; /* Posisi absolut */
+  left: 50px; /* Jarak kiri dari elemen */
+}
+
+/* Gaya untuk menambahkan garis bawah pada elemen */
+.border34 {
+  border-bottom: 1px solid black; /* Garis bawah dengan ketebalan 1px */
+  margin-top: 10px; /* Jarak atas dari elemen */
+  margin-bottom: 20px; /* Jarak bawah dari elemen */
+}
+
+/* Gaya saat hover pada tautan dalam elemen dengan kelas 'side' */
+.side a:hover {
+  color: #ff4d00; /* Warna teks saat tautan dihover pada elemen 'side' */
+}
+
+/* Gaya untuk tautan dalam elemen dengan kelas 'side' */
+.side a {
+  color: #000; /* Warna teks pada tautan dalam elemen 'side' */
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container"> <h4> <br>We are open 24 hours, and free delivery throughout the city of Banda Aceh</br> </h4></div>
+        <nav>
+            <div class="rumah">
+                <a href=""><img src="fotoAceh.png" alt=""></a>
+        </div>
+            <ul>
+                <li><a href="beranda.html" target="_self">HOME</a></li>
+                <li><a href="belum_tentu.html" target="_self">SHOP</a></li>
+                <li><a href="beranda.html#kontak" target="_self">CONTACT</a></li>
+                <li><a href="More_privasi.html" target="_self">MORE</a></li>
+                <li><a href="Abelanja.html">KERANJANG</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="border"></div>
+    <br>
+        <h1 style="text-align: center;">Kids Art</h1>
+    <div class="border"></div><br>
+<!-- ini adalah bagian side bar-->
+    <div class="side">
+    <h1>FILTER BY</h1>
+    
+    <Div class="border34"></Div>
+    <h3>categori</h3><br>
+    <a href="belum_tentu.html">Professional  Art</a>
+    
+    <br>
+    <a href="shopkid.html">kids Art</a>
+    <div class="border34"></div>
+    </div>
+    <!--ini akhir dari side bar-->
+
+
+    <div class="container45">
+        <div class="item" id="item1">
+          <img src="kertasges.png" alt="Produk 1" width="300" height="300">
+          <div class="harga">
+            <p id="namaProduk1">Kertah HVS A4</p><br>
+            <p>Harga: Rp 20.000,00</p>
+            <div class="jumlah">
+              <div class="tombol" onclick="kurangi('jumlah1')">-</div>
+              <span id="jumlah1">1</span>
+              <div class="tombol" onclick="tambah('jumlah1')">+</div>
+            </div><br>
+            <button onclick="beli('Produk 1', 'jumlah1')">Beli</button>
+          </div>
+        </div>
+
+
+
+        <div class="item" id="item2">
+            <img src="perekat selotipges.png" alt="Produk 1" width="300" height="300">
+            <div class="harga">
+              <p id="namaProduk2">5Pcs Selotip Perekat Multicolor</p><br>
+                <p>Harga: Rp 50.000,00</p>
+                <div class="jumlah">
+                  <div class="tombol" onclick="kurangi('jumlah2')">-</div>
+                  <span id="jumlah2">1</span>
+                  <div class="tombol" onclick="tambah('jumlah2')">+</div>
+                </div><br>
+                <button onclick="beli('Produk 2', 'jumlah2')">Beli</button>
+              </div>
+          </div>
+
+
+
+          <div class="item" id="item3">
+            <img src="Paketpensilges.png" alt="Produk 1" width="300" height="300">
+            <div class="harga">
+              <p id="namaProduk3">1 Paket Pensil Warna</p><br>
+                <p>Harga: Rp 1500,00</p>
+                <div class="jumlah">
+                  <div class="tombol" onclick="kurangi('jumlah3')">-</div>
+                  <span id="jumlah3">1</span>
+                  <div class="tombol" onclick="tambah('jumlah3')">+</div>
+                </div><br>
+                <button onclick="beli('Produk 3', 'jumlah3')">Beli</button>
+              </div>
+          </div>
+
+
+
+          <div class="item" id="item4">
+            <img src="guntingwarnages.png" alt="Produk 1" width="300" height="300">
+            <div class="harga">
+              <p id="namaProduk4">Gunting Warna</p><br>
+                <p>Harga: Rp 6000,00</p>
+                <div class="jumlah">
+                  <div class="tombol" onclick="kurangi('jumlah4')">-</div>
+                  <span id="jumlah4">1</span>
+                  <div class="tombol" onclick="tambah('jumlah4')">+</div>
+                </div><br>
+                <button onclick="beli('Produk 4', 'jumlah4')">Beli</button>
+              </div>
+          </div>
+
+
+
+
+          <div class="item" id="item5">
+            <img src="akrilik6warnages.png" alt="Produk 1" width="300" height="300">
+            <div class="harga">
+              <p id="namaProduk5">Cat Akrilik 6 Warna</p><br>
+                <p>Harga: Rp 56.000,00</p>
+                <div class="jumlah">
+                  <div class="tombol" onclick="kurangi('jumlah5')">-</div>
+                  <span id="jumlah5">1</span>
+                  <div class="tombol" onclick="tambah('jumlah5')">+</div>
+                </div><br>
+                <button onclick="beli('Produk 5', 'jumlah5')">Beli</button>
+              </div>
+          </div>
+
+
+
+
+          <div class="item" id="item6">
+            <img src="catbonuskuasges.png" alt="Produk 1" width="300" height="300">
+            <div class="harga">
+              <p id="namaProduk5">Cat Air Bonus Kuas</p><br>
+                <p>Harga: Rp 20.000,00</p>
+                <div class="jumlah">
+                  <div class="tombol" onclick="kurangi('jumlah6')">-</div>
+                  <span id="jumlah6">1</span>
+                  <div class="tombol" onclick="tambah('jumlah6')">+</div>
+                </div><br>
+                <button onclick="beli('Produk 6', 'jumlah6')">Beli</button>
+              </div>
+          </div>
+
+
+    
+        <!-- Tambahkan item lainnya di sini -->
+
+
+
+
+        <div class="item" id="item7">
+            <img src="sebukgliterges.png" alt="Produk 1" width="300" height="300">
+            <div class="harga">
+              <p id="namaProduk6">Serbuk Glitter 10g</p><br>
+                <p>Harga: Rp 5.000,00</p>
+                <div class="jumlah">
+                  <div class="tombol" onclick="kurangi('jumlah7')">-</div>
+                  <span id="jumlah7">1</span>
+                  <div class="tombol" onclick="tambah('jumlah7')">+</div>
+                </div><br>
+                <button onclick="beli('Produk 7', 'jumlah7')">Beli</button>
+              </div>
+          </div>
+
+
+
+
+
+          <div class="item" id="item8">
+            <img src="kainflanelges.png" alt="Produk 1" width="300" height="300">
+            <div class="harga">
+              <p id="namaProduk8">Lembar Kain Flanel 1m</p><br>
+                <p>Harga: Rp 100.000,00</p>
+                <div class="jumlah">
+                  <div class="tombol" onclick="kurangi('jumlah8')">-</div>
+                  <span id="jumlah8">1</span>
+                  <div class="tombol" onclick="tambah('jumlah8')">+</div>
+                </div><br>
+                <button onclick="beli('Produk 8', 'jumlah8')">Beli</button>
+              </div>
+          </div>
+
+
+
+
+
+
+
+          <div class="item" id="item9">
+            <img src="lemputihsebagunages.png" alt="Produk 1" width="300" height="300">
+            <div class="harga">
+              <p id="namaProduk9">White Craft Glue Lem Putih Serbaguna</p><br>
+                <p>Harga: Rp 5.000,00</p>
+                <div class="jumlah">
+                  <div class="tombol" onclick="kurangi('jumlah9')">-</div>
+                  <span id="jumlah9">1</span>
+                  <div class="tombol" onclick="tambah('jumlah9')">+</div>
+                </div><br>
+                <button onclick="beli('Produk 9', 'jumlah9')">Beli</button>
+              </div>
+          </div>
+
+      </div>
+
+    <br>
+    <br>
+
+    <footer>
+      <P> &copy;2023 by Aceh Art Store, </P>
+        
+
+              
+      <div class="link">
+        <a href="https://www.tiktok.com/@vartune" target="_blank"> Tiktok </a>
+        <a href="https://www.instagram.com/acehartsstorecenter" target="_blank"> Instagram </a>
+        <a href="https://www.facebook.com/profile.php?id=61554166425232" target="_blank"> Facebook </a>
+        <a href="https://twitter.com/Mr_Aan14" target="_blank"> Twitter </a>
+    </div>
+    
+        
+        </footer>
+        <script>
+      // Fungsi untuk menambah nilai elemen dengan ID tertentu
+function tambah(id) {
+  var jumlahElemen = document.getElementById(id); // Mengambil elemen dengan ID yang diberikan
+  var nilai = parseInt(jumlahElemen.textContent); // Mengambil nilai dari elemen tersebut
+  jumlahElemen.textContent = nilai + 1; // Menambahkan nilai dengan 1 dan menetapkan kembali nilai ke elemen
+}
+
+// Fungsi untuk mengurangi nilai elemen dengan ID tertentu
+function kurangi(id) {
+  var jumlahElemen = document.getElementById(id); // Mengambil elemen dengan ID yang diberikan
+  var nilai = parseInt(jumlahElemen.textContent); // Mengambil nilai dari elemen tersebut
+  if (nilai > 1) { // Memeriksa apakah nilai lebih besar dari 1
+    jumlahElemen.textContent = nilai - 1; // Mengurangi nilai dengan 1 jika nilai lebih besar dari 1
+  }
+}
+
+// Fungsi untuk menambah barang ke keranjang
+function beli(namaProduk, idJumlah) {
+  var jumlahElemen = document.getElementById(idJumlah);
+  var nilai = parseInt(jumlahElemen.textContent);
+  
+  var idProduk = idJumlah.replace('jumlah', ''); // Mengambil nomor produk dari idJumlah
+  var namaProdukElemen = document.getElementById('namaProduk' + idProduk);
+  var namaProduk = namaProdukElemen.textContent;
+
+  var cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
+  if (cart[namaProduk]) {
+    cart[namaProduk] += nilai;
+  } else {
+    cart[namaProduk] = nilai;
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  alert('Barang ' + namaProduk + ' telah ditambahkan ke keranjang belanja!');
+}
+</script>
+
+</body>
+</html>

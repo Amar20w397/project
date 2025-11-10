@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toko Online</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .item {
+      text-align: center;
+    }
+
+    .harga {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .jumlah {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+    }
+
+    .tombol {
+      margin: 0 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">
+      <img src="gambar1.jpg" alt="Produk 1" width="150" height="150">
+      <div class="harga">
+        <p>Harga: $10</p>
+        <div class="jumlah">
+          <span id="jumlah1">1</span>
+          <div class="tombol" onclick="kurangi('jumlah1')">-</div>
+          <div class="tombol" onclick="tambah('jumlah1')">+</div>
+        </div>
+        <button onclick="beli('Produk 1', 'jumlah1')">Beli</button>
+      </div>
+    </div>
+
+    <!-- Tambahkan item lainnya di sini -->
+  </div>
+
+  <script>
+    function tambah(id) {
+      var jumlahElemen = document.getElementById(id);
+      var nilai = parseInt(jumlahElemen.textContent);
+      jumlahElemen.textContent = nilai + 1;
+    }
+
+    function kurangi(id) {
+      var jumlahElemen = document.getElementById(id);
+      var nilai = parseInt(jumlahElemen.textContent);
+      if (nilai > 1) {
+        jumlahElemen.textContent = nilai - 1;
+      }
+    }
+
+    function beli(namaProduk, idJumlah) {
+      var jumlahElemen = document.getElementById(idJumlah);
+      var nilai = parseInt(jumlahElemen.textContent);
+      console.log("Anda akan membeli " + nilai + " " + namaProduk);
+      // Di dunia nyata, ini akan mengirim data pembelian ke server untuk diproses.
+    }
+  </script>
+</body>
+</html>

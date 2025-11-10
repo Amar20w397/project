@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Halaman Utama</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .kotaklogout {
+      text-align: center;
+    }
+
+    .logout-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .logout-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .confirmation-box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .confirmation-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .confirmation-content p {
+      margin-bottom: 20px;
+    }
+
+    .confirmation-content button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="kotaklogout">
+    <h1>Selamat Datang di Halaman Utama</h1>
+    <header>
+      <a href="#" id="logout-btn" class="logout-btn">Logout</a>
+    </header>
+    <div class="confirmation-box" id="confirmationBox">
+      <div class="confirmation-content">
+        <p>Apakah Anda yakin ingin logout?</p>
+        <button id="yes-btn" class="confirm-yes">Iya</button>
+        <button id="no-btn" class="confirm-no">Tidak</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const logoutBtn = document.getElementById('logout-btn');
+    const confirmationBox = document.getElementById('confirmationBox');
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+
+    logoutBtn.addEventListener('click', () => {
+      confirmationBox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+
+    noBtn.addEventListener('click', () => {
+      confirmationBox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    yesBtn.addEventListener('click', () => {
+      // Tambahkan logika logout di sini
+      // Misalnya: redirect ke halaman login atau hapus token autentikasi
+      alert('Anda telah logout.');
+      window.location.href = 'login.html'; // Ganti dengan halaman login yang sesuai
+    });
+
+    // Tambahkan event listener pada tombol "Tidak"
+    noBtn.addEventListener('click', () => {
+      confirmationBox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+      // window.location.href = 'beranda.html'; // Ganti dengan halaman beranda yang sesuai
+    });
+  </script>
+</body>
+</html>

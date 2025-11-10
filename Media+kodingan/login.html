@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Login Google</title>
+    <style>
+/* Gaya untuk body */
+body {
+    margin: 0; /* Menghilangkan margin bawaan */
+    display: flex; /* Mengatur tata letak elemen-elemen menjadi flexbox */
+    justify-content: center; /* Posisi elemen secara horizontal ke tengah */
+    align-items: center; /* Posisi elemen secara vertikal ke tengah */
+    height: 100vh; /* Tinggi elemen setara dengan tinggi layar (viewport height) */
+    background-color: #f1f1f1; /* Warna latar belakang body */
+}
+
+/* Gaya untuk container login */
+.login-container {
+    text-align: center; /* Posisi teks ke tengah */
+    background-color: #fff; /* Warna latar belakang container */
+    padding: 20px; /* Padding pada container */
+    border-radius: 8px; /* Sudut melengkung pada container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan pada container */
+}
+
+/* Gaya untuk logo */
+.logo img {
+    max-width: 200px; /* Lebar maksimum untuk gambar logo */
+    margin-bottom: 20px; /* Jarak bawah dari gambar logo */
+}
+
+/* Gaya untuk input dalam form login */
+.login-form input {
+    width: 100%; /* Lebar input */
+    padding: 10px; /* Padding pada input */
+    margin-bottom: 15px; /* Jarak bawah antar input */
+    border: 1px solid #ccc; /* Garis tepi input */
+    border-radius: 5px; /* Sudut melengkung input */
+}
+
+/* Gaya untuk tombol dalam form login */
+.login-form button {
+    width: 100%; /* Lebar tombol */
+    padding: 10px; /* Padding pada tombol */
+    background-color: #4285f4; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none; /* Menghilangkan border tombol */
+    border-radius: 5px; /* Sudut melengkung tombol */
+    cursor: pointer; /* Kursor menunjukkan tombol dapat diklik */
+}
+
+/* Gaya saat hover pada tombol dalam form login */
+.login-form button:hover {
+    background-color: #3171e0; /* Warna latar belakang saat tombol dihover */
+}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+    <div class="logo">
+        <img
+        src="googlelogo.png"
+        alt="Google Logo"
+        />
+    </div>
+    <form class="login-form" action="beranda.html" method="post">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <a href="beranda.html" target="_self" ><button type="submit" onclick="">Login</button></a>
+    </form>
+    </div>
+</body>
+</html>
